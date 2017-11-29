@@ -1,0 +1,45 @@
+#consigne
+{
+  font-size: 30px;
+  width:1196px;
+  height:100px;
+  margin:auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 2px rgb(127,127,127) solid;
+  border-bottom: 0px;
+  background-color: rgb(226,226,226);
+}
+
+#plan_maison
+{
+  width:1196px;
+  margin:auto;
+  display: flex;
+  justify-content: center;
+  border: 2px rgb(127,127,127) solid;
+}
+
+#capteurs
+{
+  font-size: 30px;
+  width:1196px;
+  height:100px;
+  margin:auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border:2px rgb(127,127,127) solid;
+  border-top: 0px;
+  background-color: rgb(226,226,226);
+}
+
+#consigne:hover, #capteurs:hover
+{
+  box-shadow: 5px 5px 20px rgb(127,127,127) inset;
+}
