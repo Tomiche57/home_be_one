@@ -1,0 +1,103 @@
+#choix
+{
+  font-size: 30px;
+  width:1196px;
+  margin:auto;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 2px rgb(127,127,127) solid;
+}
+
+#ajout_utilisateur
+{
+  width:598px;
+  height:100px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0,128,209);
+}
+
+#suppr_utilisateur
+{
+  width:598px;
+  height:100px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(226,226,226);
+}
+
+#changer_mdp
+{
+  width:598px;
+  height:100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(226,226,226);
+}
+
+#changer_mail
+{
+  width:598px;
+  height:100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0,128,209);
+}
+
+#resilier_compte
+{
+  width: 598px;
+  height:100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(226,226,226);
+}
+
+#restreindre
+{
+  width:598px;
+  height:100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0,128,209);
+
+}
+
+#ajout_utilisateur:hover
+{
+  box-shadow: 5px 5px 20px rgb(0,96,159) inset;
+}
+
+#suppr_utilisateur:hover
+{
+    box-shadow: 5px 5px 20px rgb(127,127,127) inset;
+}
+
+#changer_mdp:hover
+{
+    box-shadow: 5px 5px 20px rgb(127,127,127) inset;
+}
+
+#changer_mail:hover
+{
+    box-shadow: 5px 5px 20px rgb(0,96,159) inset;
+}
+
+#resilier_compte:hover
+{
+  box-shadow: 5px 5px 20px rgb(127,127,127) inset;
+
+}
+
+#restreindre:hover
+{
+  box-shadow: 5px 5px 20px rgb(0,96,159) inset;
+
+}

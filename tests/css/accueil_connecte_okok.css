@@ -1,0 +1,21 @@
+#plan_maison
+{
+  width:1196px;
+  height: 596px;
+  margin:auto;
+  display: flex;
+  justify-content: center;
+  border: 2px rgb(127,127,127) solid;
+  background-image: url(../image/plan_maison_4.png);
+}
+
+#capteur_1
+{
+  display: flex;
+  width:20px;
+  height:20px;
+  background-color: green;
+  position: relative;
+  left: -582px;
+  top:5px;
+}

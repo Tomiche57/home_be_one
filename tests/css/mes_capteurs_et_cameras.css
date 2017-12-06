@@ -1,0 +1,73 @@
+#choix
+{
+  font-size: 30px;
+  width:1196px;
+  margin:auto;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 2px rgb(127,127,127) solid;
+}
+
+#activer_capteur
+{
+  width:598px;
+  height:100px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0,128,209);
+}
+
+#desactiver_capteur
+{
+  width:598px;
+  height:100px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(226,226,226);
+}
+
+#mode_automatique
+{
+  width:598px;
+  height:100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(226,226,226);
+}
+
+#afficher_donnees
+{
+  width:598px;
+  height:100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0,128,209);
+}
+
+
+
+#activer_capteur:hover
+{
+    box-shadow: 5px 5px 20px rgb(0,96,159) inset
+}
+
+
+#desactiver_capteur:hover
+{
+    box-shadow: 5px 5px 20px rgb(127,127,127) inset;
+}
+
+#mode_automatique:hover
+{
+    box-shadow: 5px 5px 20px rgb(127,127,127) inset;
+}
+
+#afficher_donnees:hover
+{
+    box-shadow: 5px 5px 20px rgb(0,96,159) inset;
+}
