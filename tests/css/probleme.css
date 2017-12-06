@@ -1,0 +1,23 @@
+#prob
+{
+  margin: auto;
+  width: 1200px;
+  background-color: rgb(226,226,226);
+  display: flex;
+}
+
+#probleme_1, #probleme_2
+{
+  width:80px;
+  display: flex;
+}
+
+#sous_sous_probleme_1, #sous_sous_probleme_2
+{
+  display:none;
+}
+
+#probleme_1:hover, #probleme_2:hover
+{
+  border: 1px black solid;
+}

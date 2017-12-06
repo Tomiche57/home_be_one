@@ -1,0 +1,10 @@
+#supprimer_utilisateur
+{
+  font-size: 30px;
+  width:1196px;
+  margin:auto;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 2px rgb(127,127,127) solid;
+}
