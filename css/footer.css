@@ -1,0 +1,11 @@
+footer
+{
+  width:1200px;
+  height: 70px;
+  margin:auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(rgb(0,128,209),rgb(0,9,176));
+  border-radius: 10px;
+}
