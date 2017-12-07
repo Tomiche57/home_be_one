@@ -16,10 +16,10 @@
         <a href="#">Supprimer utilisateur</a>
       </div>
       <div id="changer_mdp">
-        <a href="#">Changer mon mot de passe</a>
+        <a href="http://localhost/home_be_one/tests/edition_profil.php">Changer mon mot de passe</a>
       </div>
       <div id="changer_mail">
-        <a href="#">Changer mon mail</a>
+        <a href="http://localhost/home_be_one/tests/edition_profil.php">Changer mon mail</a>
       </div>
       <div id="restreindre">
         <a href="#">Restreindre</a>
@@ -29,6 +29,7 @@
       </div>
     </div>
 
+    
 
 
 

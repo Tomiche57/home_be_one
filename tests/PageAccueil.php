@@ -7,7 +7,7 @@
 	<title>Home Be One</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="Style.css" />
+	<link rel="stylesheet" href="css/Style.css" />
 
 </head>
 
@@ -18,8 +18,8 @@
 		<!-- Header -->
 		<header id="header" class="alt">
 			<a href="PageAccueil.html" class="logo"><strong>Home Be One</strong> <span>by Domisep</span></a>
-			<em><a  href="http://localhost/tests/home_be_one/sessions_start_tuto_cible.php" id="inscription"> S'inscrire</a></br></em>
-			<em><a  href="http://localhost/tests/home_be_one/connexion_gustave.php" id="connexion">Se connecter</a></br></em>
+			<em><a  href="http://localhost/home_be_one/tests/sessions_start_tuto_cible.php" id="inscription"> S'inscrire</a></br></em>
+			<em><a  href="http://localhost/home_be_one/tests/connexion_gustave.php" id="connexion">Se connecter</a></br></em>
 
 		</header>
 

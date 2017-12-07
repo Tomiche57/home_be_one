@@ -29,7 +29,7 @@ session_start()
 
 
 
-            <form action="http://localhost/tests/home_be_one/edition_profil_cible.php" method="POST">
+            <form action="http://localhost/home_be_one/tests/edition_profil_cible.php" method="POST">
 
                <label for="new_pseudo">Nouveau pseudo :</label><input type="text" name="new_pseudo" id="new_pseudo"></br>
                <label for="new_mdp">Nouveau mot de passe :</label><input type="password" name="new_mdp" id="new_mdp"></br>
@@ -40,7 +40,7 @@ session_start()
               <input type="submit" name="Valider modifications">  
 
               </form>
-                  <a href="http://localhost/tests/home_be_one/accueil_connecte_okok.php">Revenir à l'acceuil</a>
+                  <a href="http://localhost/home_be_one/tests/accueil_connecte_okok.php">Revenir à l'acceuil</a>
 
 
             </br>

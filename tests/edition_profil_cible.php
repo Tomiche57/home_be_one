@@ -24,7 +24,7 @@
              $new_pseudo=htmlspecialchars($_POST['new_pseudo']);
              $insert_pseudo=$bdd->prepare('UPDATE utilisateur SET pseudo= ? WHERE mdp=?');
              $insert_pseudo->execute(array($new_pseudo, $_SESSION['mdp']));
-             $url='http://localhost/tests/home_be_one/edition_profil.php';
+             $url='http://localhost/home_be_one/tests/edition_profil.php';
              $delai=2;
           echo "Votre pseudo a bien été modifié";
           header("Refresh: $delai;url=$url");
@@ -32,7 +32,7 @@
           }
            else
               {
-                $url='http://localhost/tests/home_be_one/edition_profil.php';
+                $url='http://localhost/home_be_one/tests/edition_profil.php';
                        $delai=2;
                       echo "erreur";
                       header("Refresh: $delai;url=$url");
@@ -43,14 +43,14 @@
              $new_mail=htmlspecialchars($_POST['new_mail']);
              $insert_mail=$bdd->prepare('UPDATE utilisateur SET mail= ? WHERE pseudo=?');
              $insert_mail->execute(array($new_mail, $_SESSION['pseudo']));
-             $url='http://localhost/tests/home_be_one/edition_profil.php';
+             $url='http://localhost/home_be_one/tests/edition_profil.php';
              $delai=2;
           echo "Votre mail a bien été modifié";
           header("Refresh: $delai;url=$url");
             }
              else
               {
-                 $url='http://localhost/tests/home_be_one/edition_profil.php';
+                 $url='http://localhost/home_be_one/tests/edition_profil.php';
              $delai=2;
               echo "erreur";
               header("Refresh: $delai;url=$url");
@@ -63,14 +63,14 @@
                     $new_mdp=htmlspecialchars($_POST['new_mdp']);
                     $insert_mdp=$bdd->prepare('UPDATE utilisateur SET mdp= ? WHERE mdp=?');
                     $insert_mdp->execute(array($new_mdp, $_SESSION['mdp']));
-                    $url='http://localhost/tests/home_be_one/edition_profil.php';
+                    $url='http://localhost/home_be_one/tests/edition_profil.php';
              $delai=2;
           echo "Votre mdp a bien été modifié";
           header("Refresh: $delai;url=$url");
              
                  }
                 else {
-                        $url='http://localhost/tests/home_be_one/edition_profil.php';
+                        $url='http://localhost/home_be_one/tests/edition_profil.php';
                        $delai=2;
                       echo "Vos mdp ne correspondent pas";
                       header("Refresh: $delai;url=$url");
@@ -79,7 +79,7 @@
           } 
 
           else{
-                  $url='http://localhost/tests/home_be_one/edition_profil.php';
+                  $url='http://localhost/home_be_one/tests/edition_profil.php';
                        $delai=2;
                       echo "erreur";
                       header("Refresh: $delai;url=$url");
