@@ -19,11 +19,7 @@
 		<header id="header" class="alt">
 			<a href="PageAccueil.html" class="logo"><strong>Home Be One</strong> <span>by Domisep</span></a>
 			<em><a  href="http://localhost/home_be_one/tests/sessions_start_tuto_cible.php" id="inscription"> S'inscrire</a></br></em>
-<<<<<<< HEAD
-			<em><a  href="http://localhost/home_be_one/tests/connexion_gustave.php" id="connexion">Se connecté</a></br></em>
-=======
-			<em><a  href="http://localhost/home_be_one/tests/connexion_gustave.php" id="connexion">Se connecter</a></br></em>
->>>>>>> 698550bcf8f6adc33ebdf87f07dd0c4bca05552e
+			<em><a  href="http://localhost/home_be_one/tests/connexion_gustave.php" id="connexion">Se connecter lol  </a></br></em>
 
 		</header>
 
