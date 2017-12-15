@@ -17,20 +17,24 @@
 
 		<!-- Header -->
 		<header id="header" class="alt">
-			<a href="PageAccueil.html" class="logo"><strong>Home Be One</strong> <span>by Domisep</span></a>
-			<em><a  href="http://localhost/home_be_one/tests/sessions_start_tuto_cible.php" id="inscription"> S'inscrire</a></br></em>
-			<em><a  href="http://localhost/home_be_one/tests/connexion_gustave.php" id="connexion">Se connecter</a></br></em>
-
+			<a href="PageAccueil.html" class="logo"><strong>Home Be One</strong></a>
+			<div class="sign">
+				<img class="icone" src="image/logo_home_blanc.png" alt="home_be_one" />
+				<ul>
+					<li><a href="connexion_gustave.php"><strong>Sign up</strong></a>/
+					<li><a href="sessions_start_tuto_cible.php"><strong> Sign in</strong></a>
+				</ul>
+			</div>
 		</header>
 
 		<!-- Banner -->
 		<section id="banner">
 			<div class="inner">
 				<header class="major">
-					<h1>Welcome on Home Be One's website</h1>
+					<h1>Welcome to Home Be One's website</h1>
 				</header>
 				<div class="content">
-					<p>Ready to control everything?<br></br>
+					<p>Ready to control everything?<br>
 					The Force is no longer a dream.</p>
 				</div>
 			</div>

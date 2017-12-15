@@ -1,0 +1,30 @@
+#piece
+{
+  font-size: 30px;
+  font-variant:small-caps;
+  font-weight: bold;
+}
+
+#capteur
+{
+  font-variant: small-caps;
+  font-size: 20px;
+  list-style-type: none;
+}
+
+.block_piece
+{
+  width: 1196px;
+  margin: auto;
+  border: 1px solid;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(226,226,226);
+}
+
+.probleme_capteur
+{
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+}

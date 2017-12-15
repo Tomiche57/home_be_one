@@ -9,18 +9,18 @@
     <div id="header">
       <div id="menu"><span class="police">Menu</span>
         <div class="fleche_haut1"></div>
-        <ul id="sous_menu">
+        <ul id="sous_menu" class="liste">
           <li><a href="gerer_domicile.php">Gérer mon domicile</a></li>
           <li><a href="gerer_consommation.php">Gérer ma consommation</a></li>
           <li><a href="catalogue.php">Catalogue</a></li>
-          <li><a href="probleme.php">Un problème ?</a></li>
+          <li><a href="un_probleme.php">Un problème ?</a></li>
           <li><a href="frequentation.php">Fréquentation</a></li><!--Visible que par administrateur-->
         </ul>
       </div>
 
       <div id="profil"><img src="image/icone_profil_70.png" alt="icone"/>
         <div class="fleche_haut2"></div>
-        <ul id="sous_profil">
+        <ul id="sous_profil" class="liste">
           <li class="mess"><a href="messages.php">Mes messages</a></li>
           <li><a href="gerer_profil.php">Gérer mon profil</a></li>
           <li><a href="deconnexion.php">Déconnexion</a></li>

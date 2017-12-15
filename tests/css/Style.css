@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
 
-body 
+body
 {
 	background: #0080D1;
 	color: #ffffff;
@@ -17,13 +17,13 @@ a
 	text-decoration: none;
 }
 
-a:hover 
+a:hover
 {
 	border-bottom-color: transparent;
 	color: #000000 !important;
 }
 
-h1, h2, h3 
+h1, h2, h3
 {
 	color: #ffffff;
 	font-weight: 300;
@@ -75,7 +75,7 @@ header.content
 	border-top: 0 !important;
 }
 
-.tiles article 
+.tiles article
 {
 	align-items: center;
 	display: flex;
@@ -99,14 +99,13 @@ header.content
 
 /* Header */
 
-#header 
+#header
 {
 	display: flex;
 	box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
 	cursor: default;
 	font-weight: 600;
 	height: 3.25em;
-	left: 0;
 	letter-spacing: 0.25em;
 	line-height: 3.25em;
 	margin: 0;
@@ -115,6 +114,7 @@ header.content
 	top: 0;
 	width: 100%;
 	z-index: 10000;
+	left: 0;
 }
 
 #header .logo strong
@@ -127,9 +127,27 @@ header.content
 	padding: 0 0.125em 0 0.375em;
 }
 
+#header .sign ul
+{
+	float: right;
+	position: absolute;
+	background-color: #ffffff;
+	color: #0080D1;
+	right: 0;
+	display: flex;
+	padding: 0 0.125em 0 0.375em;
+	top: -3.5px;
+	line-height: 1.67em;
+}
+
+#header .sign ul li
+{
+	list-style: none;
+}
+
 #header.alt
 {
-	background-color: transparent;
+	background-color: #0080D1;
 }
 
 /* Banner */
@@ -145,21 +163,10 @@ header.content
 	cursor: normal;
 }
 
-
-#header #connexion
+.icone
 {
-	color: rgb(148, 46, 150);
-	border: 3px solid rgb(148, 46, 150);;
-	border-radius: 10px;
-	margin-left: 30px;
-	color: rgb(148, 46, 150);
-}
-#header #inscription
-{
-	color: rgb(148, 46, 150);
-	border: 3px solid rgb(148, 46, 150);;
-	border-radius: 10px;
-	margin-left: 650px;
-	color: rgb(148, 46, 150);
-
+	position: absolute;
+	left: 50%;
+	height : 100%;
+	width: auto;
 }

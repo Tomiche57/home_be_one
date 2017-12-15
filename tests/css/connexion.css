@@ -1,0 +1,50 @@
+#block_connexion
+{
+  background-color: rgb(0,128,209);
+  height :200px;
+  width:700px;
+  left:400px;
+  top:100px;
+  position: relative;
+  border-radius: 10px;
+}
+
+#pseudo
+{
+  height: 20px;
+  width : 200px;
+}
+
+#mdp
+{
+  height: 20px;
+  width: 200px;
+}
+
+.connect
+{
+  font-size: 20px;
+  margin: auto;
+  position: absolute;
+  left:300px;
+}
+
+.champs
+{
+  position: relative;
+  top:50px;
+}
+
+#send
+{
+  position: absolute;
+  top:150px;
+  left:300px;
+}
+
+img
+{
+  position: absolute;
+  left:1000px;
+  top:175px;
+}

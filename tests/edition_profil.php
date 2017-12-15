@@ -11,14 +11,14 @@ session_start()
       <div align="center">
         <?php
 
-        $bdd = new PDO('mysql:host=localhost;dbname=base_de_donnes_home_be_one;charset=utf8', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=bdd_hbo;charset=utf8', 'root', '');
          $requser=$bdd->prepare('SELECT * FROM utilisateur WHERE pseudo=? ');
          $requser->execute(array($_SESSION['pseudo']));
          $_SESSION=$requser->fetch();
        ?>
                <h2 style ="color: red;">Profil de <?php echo $_SESSION['pseudo'];?></h2>
           <br />
-         
+
             <h2 style="text-align: center;"> Mail= <?php echo $_SESSION['mail'];?> </h2>
             <h2 style=" text-align: center;color:">Pseudo = <?php echo $_SESSION['pseudo'];?> </h2>
             <h2 style=" text-align: center;color:">MOT DE PASSE = <?php echo $_SESSION['mdp'];?> </h2>
@@ -37,7 +37,7 @@ session_start()
                <label for="new_mdp2">Confirmation nouveau mot de passe :</label><input type="password" name="new_mdp2" id="new_mdp2"></br>
                <label for="new_mail">Changer mon mail : </label><input type="text" name="new_mail" id="new_mail"></br>
 
-              <input type="submit" name="Valider modifications">  
+              <input type="submit" name="Valider modifications">
 
               </form>
                   <a href="http://localhost/home_be_one/tests/accueil_connecte_okok.php">Revenir à l'acceuil</a>
@@ -65,13 +65,13 @@ session_start()
 
             <?php include('footer.php');?>
 
-              
+
             </form>
 
 
-              
 
-         
+
+
       </div>
 </body>
 </html>

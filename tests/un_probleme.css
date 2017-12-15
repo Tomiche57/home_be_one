@@ -1,0 +1,59 @@
+#faq
+{
+  font-size: 30px;
+  width:1196px;
+  height:150px;
+  margin:auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-top:20px;
+  padding-bottom: 20px;
+  border: 2px rgb(127,127,127) solid;
+  border-bottom: 0px;
+  background-color: rgb(127,127,127);
+}
+
+#sav
+{
+  width:1196px;
+  height:300px;
+  margin:auto;
+  display: flex;
+  justify-content: center;
+  border: 2px rgb(127,127,127) solid;
+  position: relative;
+}
+
+#ticket
+{
+  border: 2px rgb(127,127,127) solid;
+  position: absolute;
+  right: 598px;
+  left: 0px;
+  height: 300px;
+
+
+}
+
+
+#zone_texte
+{
+  border: 2px rgb(127,127,127) solid;
+  position: absolute;
+  right: 0px;
+  left: 598px;
+  height: 300px;
+}
+
+.titre
+{
+    text-align: center;
+}
+
+
+.bouton
+{
+    right: 299px;
+    left: 897px;
+}

@@ -1,4 +1,4 @@
-    <?php 
+    <?php
     session_start()
 
     ?>
@@ -6,7 +6,7 @@
 <?php
     try
     {
-        $bdd = new PDO('mysql:host=localhost;dbname=base_de_donnes_home_be_one;charset=utf8', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=bdd_hbo;charset=utf8', 'root', '');
     }
     catch(Exception $e)
     {
@@ -28,7 +28,7 @@
              $delai=2;
           echo "Votre pseudo a bien été modifié";
           header("Refresh: $delai;url=$url");
-             
+
           }
            else
               {
@@ -36,8 +36,8 @@
                        $delai=2;
                       echo "erreur";
                       header("Refresh: $delai;url=$url");
-              } 
-                
+              }
+
           if (!empty($_POST['new_mail']) AND $_POST['new_mail']!=$_SESSION['mail']) //modifie mail
           {
              $new_mail=htmlspecialchars($_POST['new_mail']);
@@ -54,8 +54,8 @@
              $delai=2;
               echo "erreur";
               header("Refresh: $delai;url=$url");
-              } 
-              
+              }
+
        if(!empty($_POST['new_mdp']) AND !empty($_POST['new_mdp2'])  AND $_POST['new_mdp'] !=$_SESSION['mdp']) // modifie mdp
           {
                 if ($_POST['new_mdp'] == $_POST['new_mdp2'])
@@ -67,24 +67,23 @@
              $delai=2;
           echo "Votre mdp a bien été modifié";
           header("Refresh: $delai;url=$url");
-             
+
                  }
                 else {
                         $url='http://localhost/home_be_one/tests/edition_profil.php';
                        $delai=2;
                       echo "Vos mdp ne correspondent pas";
                       header("Refresh: $delai;url=$url");
-                        
-                     } 
-          } 
+
+                     }
+          }
 
           else{
                   $url='http://localhost/home_be_one/tests/edition_profil.php';
                        $delai=2;
                       echo "erreur";
                       header("Refresh: $delai;url=$url");
-              }     
+              }
 
 
     ?>
-

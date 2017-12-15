@@ -1,11 +1,11 @@
 <html>
 <head>
-      <title>Page de connexion </title>
+      <title>Page d'inscription </title>
       <meta charset="utf-8">
 </head>
 <body style="background-color: #0080D1;">
       <div align="center">
-               <h2 style ="color: red;">Inscris toi !</h2>
+               <h2 style ="color: white;">Inscris toi !</h2>
           <br/><br />
          <form method="POST" action="">
             <table>
@@ -32,7 +32,7 @@
                   <td>
                      <input type="text" placeholder="cle" id="cle" name="cle" />
                   </td>
-               </tr> 
+               </tr>
                <tr>
                   <td align="right">
                      <label for="pseudo">Pseudo :</label>
@@ -40,7 +40,7 @@
                   <td>
                      <input type="text" placeholder="pseudo" id="pseudo" name="pseudo" value="<?php if(isset($mail2)) { echo $pseudo; } ?>" />
                   </td>
-               </tr>   
+               </tr>
                <tr>
                   <td align="right">
                      <label for="mail">Mail :</label>
@@ -73,7 +73,7 @@
                      <input type="password" placeholder="mdp2" id="mdp2" name="mdp2" />
                   </td>
                </tr>
-               <tr>   
+               <tr>
                   <td align="center">
                      <br />
                      <input  style= "text-align: center;  "type="submit" name="forminscription" value="Je m'inscris" />
@@ -81,7 +81,7 @@
                </tr>
             </table>
          </form>
-         
+
       </div>
 </body>
 </html>
@@ -90,7 +90,7 @@
 
 
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=base_de_donnes_home_be_one', 'root', '');
+$bdd = new PDO('mysql:host=localhost;dbname=bdd_hbo', 'root', '');
 
 
 
@@ -115,10 +115,10 @@ $bdd = new PDO('mysql:host=localhost;dbname=base_de_donnes_home_be_one', 'root',
                         $insertmbr = $bdd->prepare("INSERT INTO utilisateur(nom, prenom, cle, pseudo, mail, mdp ) VALUES(?, ?, ?, ?, ?, ?)");
                         $insertmbr->execute(array($nom, $prenom, $cle, $pseudo, $mail, $mdp));
                         $_SESSION['pseudo']=$_POST['pseudo'];
-                        ?>
 
-                        
-                        <a href ="accueil_connecte_okok.php">Welcome</a><?php
+
+header('Location: http://localhost/home_be_one/tests/connexion_gustave.php');
+
                      }  else {
                         echo "Vos mots de passes ne correspondent pas !";
                      }
@@ -132,8 +132,9 @@ $bdd = new PDO('mysql:host=localhost;dbname=base_de_donnes_home_be_one', 'root',
             echo "Vos adresses mail ne correspondent pas !";
          }
       } else {
-         echo "Tous les champs doivent être complétés !";  
-      } 
+         echo "Tous les champs doivent être complétés !";
+      }
    } else  {
       echo ' ';
-   }   
+   }
+?>

@@ -15,6 +15,12 @@
       <div id="desactiver_capteur">
         <a href="#">Désactiver des capteurs</a>
       </div>
+      <div id="ajouter_capteur">
+        <a href="capteurs.php">Ajouter des capteurs</a>
+      </div>
+      <div id="supprimer_capteur">
+        <a href="#">Supprimer des capteurs</a>
+      </div>
       <div id="mode_automatique">
         <a href="#">Mode automatique</a>
       </div>

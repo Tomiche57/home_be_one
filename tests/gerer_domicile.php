@@ -39,13 +39,11 @@
     </p>
 
     </div>
-    <div id="plan_maison">
-      <p>
-        <img src="image/plan_maison.png" alt="plan" />
-      </p>
-    </div>
     <div id="capteurs">
       <a href="mes_capteurs_et_cameras.php">Mes capteurs et caméras</a>
+    </div>
+    <div id="ajout_piece">
+      <a href="pieces.php">Ajouter des pièces</a>
     </div>
 
 
