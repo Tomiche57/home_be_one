@@ -47,6 +47,7 @@
 				<article>
 					<header class="major">
 						<h3><a href="#" class="link">Catalogue</h3>
+
 						<p>All products</p>
 					</header>
 				</article>
