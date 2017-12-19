@@ -11,7 +11,7 @@
       <!--Rajouter d'autres réseaux sociaux si Domisep en a-->
       <a href="cgu.php" class="cgu">Conditions générales d'utilisation</a></br>
       <a href="" class="">Qui sommes nous ?</a></br>
-      <a href="" class="">Manuel d'utilisation</a></br>
+      <a href="" class="">Manuell d'utilisation</a></br>
       <label for="langues">Langue :</label>
       <select name="langues" id="langues">
         <option value="français">Français</option>
