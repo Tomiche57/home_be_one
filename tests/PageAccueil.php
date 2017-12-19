@@ -17,7 +17,6 @@
 
 		<!-- Header -->
 		<header id="header" class="alt">
-<<<<<<< HEAD
 			<a href="PageAccueil.html" class="logo"><strong>Home Be One</strong></a>
 			<div class="sign">
 				<img class="icone" src="image/logo_home_blanc.png" alt="home_be_one" />
@@ -26,12 +25,6 @@
 					<li><a href="sessions_start_tuto_cible.php"><strong> Sign in</strong></a>
 				</ul>
 			</div>
-=======
-			<a href="PageAccueil.html" class="logo"><strong>Home Be One</strong> <span>by Domisep</span></a>
-			<em><a  href="http://localhost/home_be_one/tests/sessions_start_tuto_cible.php" id="inscription"> S'inscrire</a></br></em>
-			<em><a  href="http://localhost/home_be_one/tests/connexion_gustave.php" id="connexion">Se connecter lol  </a></br></em>
-
->>>>>>> 9df7a370bc87f1c3ca5faac2bbda2cdd1e2da7eb
 		</header>
 
 		<!-- Banner -->
@@ -54,7 +47,6 @@
 				<article>
 					<header class="major">
 						<h3><a href="#" class="link">Catalogue</h3>
-							<?php include('catalogue.php'); ?>
 
 						<p>All products</p>
 					</header>
