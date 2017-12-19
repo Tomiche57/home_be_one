@@ -13,7 +13,7 @@
         <a href="#">Ajouter utilisateur</a>
       </div>
       <div id="suppr_utilisateur">
-        <a href="#">Supprimer utilisateur</a>
+        <a href="supprimer_utilisateur.php">Supprimer utilisateur</a>
       </div>
       <div id="changer_mdp">
         <a href="http://localhost/home_be_one/tests/edition_profil.php">Changer mon mot de passe</a>
@@ -29,7 +29,7 @@
       </div>
     </div>
 
-    
+
 
 
 
