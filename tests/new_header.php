@@ -21,7 +21,7 @@
       <div id="profil"><img src="image/icone_profil_70.png" alt="icone"/>
         <div class="fleche_haut2"></div>
         <ul id="sous_profil" class="liste">
-          <li class="mess"><a href="messages.php">Mes messages</a></li>
+          <li class="mess"><a href="forum/index.php"> Accéder au forum</a></li>
           <li><a href="gerer_profil.php">Gérer mon profil</a></li>
           <li><a href="deconnexion.php">Déconnexion</a></li>
         </ul>
