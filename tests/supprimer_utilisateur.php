@@ -19,15 +19,18 @@ session_start();
       <form action="" method="post">
         <br />
                <input type="checkbox" name="oui" id="oui" /> <label for="oui">OUI</label><br />
-               <input type="checkbox" name="non" id="non" /> <label for="steak">NON</label><br />
+               <input type="checkbox" name="non" id="non" /> <label for="non">NON</label><br />
 
 
         <input type="submit" name="Valider" value="envoyer">
-    </div>    
+    </div>
       </form>
       <?php if (isset($erreur))
         echo $erreur;
+
+
        ?>
+
   </body>
 </html>
 <?php
@@ -48,7 +51,7 @@ session_start();
               $sup_utilisateur=$bdd->prepare('DELETE FROM utilisateur WHERE pseudo=? ')  or die(print_r($bdd->errorInfo()));
               $sup_utilisateur->execute(array($pseudo_supprimé)) or die(print_r($bdd->errorInfo()));
               $delai=2;
-              $url='http://localhost/home_be_one/tests/accueil_connecte_okok.php';
+              $url='http://localhost/home_be_one/tests/deconnexion.php';
               echo 'Votre mdp et pseudo ont été supprimé';
               header("Refresh: $delai;url=$url");
         }
@@ -66,5 +69,8 @@ else
     $erreur=" Veuillez choisir votre réponse !";
     exit;
     }
+
+
+
 
  ?>
