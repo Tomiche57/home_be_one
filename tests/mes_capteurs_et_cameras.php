@@ -19,7 +19,7 @@
         <a href="capteurs.php">Ajouter des capteurs</a>
       </div>
       <div id="supprimer_capteur">
-        <a href="#">Supprimer des capteurs</a>
+        <a href="supprimer_capteur.php">Supprimer des capteurs</a>
       </div>
       <div id="mode_automatique">
         <a href="#">Mode automatique</a>

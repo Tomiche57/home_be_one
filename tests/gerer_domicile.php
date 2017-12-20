@@ -43,7 +43,7 @@
       <a href="mes_capteurs_et_cameras.php">Mes capteurs et caméras</a>
     </div>
     <div id="ajout_piece">
-      <a href="pieces.php">Ajouter des pièces</a>
+      <a href="ajouter_supprimer_piece.php"> Mes Pièces</a>
     </div>
 
 
