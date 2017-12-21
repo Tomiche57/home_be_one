@@ -112,9 +112,18 @@ $bdd = new PDO('mysql:host=localhost;dbname=bdd_hbo', 'root', '');
                   $mailexist = $reqmail->rowCount();
                   if($mailexist == 0) {
                      if($mdp == $mdp2) {
-                        $insertmbr = $bdd->prepare("INSERT INTO utilisateur(nom, prenom, cle, pseudo, mail, mdp ) VALUES(?, ?, ?, ?, ?, ?)");
-                        $insertmbr->execute(array($nom, $prenom, $cle, $pseudo, $mail, $mdp));
+                       if((substr('$cle',0,1))==1)
+                       {
+                        $insertmbr = $bdd->prepare("INSERT INTO utilisateur(nom, prenom, cle, pseudo, mail, mdp, statut ) VALUES(?, ?, ?, ?, ?, ?, ?)");
+                        $insertmbr->execute(array($nom, $prenom, $cle, $pseudo, $mail, $mdp, 'classique'));
                         $_SESSION['pseudo']=$_POST['pseudo'];
+                       }
+                       elseif ((substr('$cle',0,1))==2)
+                       {
+                         $insertmbr = $bdd->prepare("INSERT INTO utilisateur(nom, prenom, cle, pseudo, mail, mdp, statut ) VALUES(?, ?, ?, ?, ?, ?, ?)");
+                         $insertmbr->execute(array($nom, $prenom, $cle, $pseudo, $mail, $mdp, 'administrateur'));
+                         $_SESSION['pseudo']=$_POST['pseudo'];
+                       }
 
 
 header('Location: http://localhost/home_be_one/tests/connexion_gustave.php');

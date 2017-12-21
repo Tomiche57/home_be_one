@@ -14,6 +14,8 @@
 
 .block_piece
 {
+  z-index: -1;
+  position: relative;
   width: 1196px;
   margin: auto;
   border: 1px solid;
@@ -27,4 +29,15 @@
   color: red;
   font-style: italic;
   font-weight: bold;
+}
+
+.icone_piece
+{
+  position: absolute;
+  height:50px;
+  width : auto;
+  left : 20px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

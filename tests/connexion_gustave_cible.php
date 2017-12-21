@@ -40,10 +40,16 @@ $_SESSION['pseudo']=$_POST['pseudo'];
 
     {
         $_SESSION['pseudo']=$_POST['pseudo'];
+        $req_session=$bdd->prepare('SELECT ID from utilisateur WHERE pseudo= ?');
+        $req_session->execute(array($_SESSION['pseudo']));
+        $_SESSION = $req_session->fetch();
         $delai=1;
         $url='http://localhost/home_be_one/tests/accueil_connecte_okok.php';
         echo 'Veuillez patienter';
         header("Refresh: $delai;url=$url");
+        $req_session=$bdd->prepare('SELECT ID from utilisateur WHERE pseudo= ?');
+        $req_session->execute(array($_SESSION['pseudo']));
+        $_SESSION = $req_session->fetch();
         exit();
     }  ?>
 

@@ -11,6 +11,7 @@
 </html>
 
 <?php
+
 try
 {
 	$bdd = new PDO('mysql:host=localhost;dbname=bdd_hbo;charset=utf8', 'root', '');
@@ -20,13 +21,39 @@ catch (Exception $e)
         die('Erreur : ' . $e->getMessage());
 }
 
-$req_piece = $bdd->prepare('SELECT nom FROM piece WHERE pseudo=?'); //Pour l'instant manuellement pour test mais apres : pseudo=?
+$req_piece = $bdd->prepare('SELECT nom, type FROM piece WHERE pseudo=?'); //Pour l'instant manuellement pour test mais apres : pseudo=?
 $req_piece->execute(array($_SESSION['pseudo']));
 
 //On boucle sur les pieces puis dans chaque boucle de piece on boucle sur les capteurs
 while ($piece = $req_piece->fetch())
 {
+
 	echo '<div class="block_piece">';
+	if ($piece['type']=="salon")
+	{?>
+		<img class="icone_piece" src="image/icone_salon.png" alt="" />'
+		<?php
+	}
+	if ($piece['type']=="chambre")
+	{?>
+		<img class="icone_piece" src="image/icone_chambre.png" alt="" />
+		<?php
+	}
+	if ($piece['type']=="cuisine")
+	{?>
+		<img class="icone_piece" src="image/icone_cuisine.png" alt="" />
+		<?php
+	}
+	if ($piece['type']=="salle de bain")
+	{?>
+		<img class="icone_piece" src="image/icone_salle_de_bain.png" alt="" />
+		<?php
+	}
+	if ($piece['type']=="garage")
+	{?>
+		<img class="icone_piece" src="image/icone_garage.png" alt="" />
+		<?php
+	}
 	echo '<span id="piece">';
   echo  $piece['nom'].'</br>';
 	echo '</span>';
