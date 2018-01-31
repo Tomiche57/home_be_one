@@ -1,0 +1,376 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
+--
+-- Hôte : 127.0.0.1:3306
+-- Généré le :  mar. 30 jan. 2018 à 19:22
+-- Version du serveur :  5.7.19
+-- Version de PHP :  5.6.31
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de données :  `bdd_hbo`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `actionneurs`
+--
+
+DROP TABLE IF EXISTS `actionneurs`;
+CREATE TABLE IF NOT EXISTS `actionneurs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) DEFAULT NULL,
+  `numero_de_serie` int(11) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `piece` varchar(255) DEFAULT NULL,
+  `ID_user` int(11) DEFAULT NULL,
+  `maitre` int(11) DEFAULT NULL,
+  `etat` varchar(255) DEFAULT NULL,
+  `valeur` varchar(255) DEFAULT NULL,
+  `dateDact` varchar(255) DEFAULT NULL,
+  `dateFact` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `actionneurs`
+--
+
+INSERT INTO `actionneurs` (`id`, `nom`, `numero_de_serie`, `type`, `piece`, `ID_user`, `maitre`, `etat`, `valeur`, `dateDact`, `dateFact`) VALUES
+(1, 'chauffage1', NULL, 'temperature', 'cuisine', 37, NULL, 'ok', '15', '2018-01-22 10:43:09', '2018-01-18 09:49:55'),
+(2, 'lumiere1', NULL, 'luminosite', NULL, 37, NULL, NULL, '', '2017-12-28 19:28:55', '2017-12-28 22:34:17'),
+(3, 'pression1', NULL, 'pression', NULL, 37, NULL, NULL, '', '2017-12-25 18:32:05', '2017-12-28 16:54:36'),
+(6, 'chauffage2', NULL, 'temperature', 'salon', 37, NULL, 'ok', '15', '2018-01-22 10:43:09', '2018-01-18 09:47:49'),
+(8, 'lampe 1', NULL, 'luminosite', 'salon', 37, NULL, 'ok', 'haute', '2018-01-22 10:30:20', NULL),
+(13, NULL, NULL, NULL, NULL, NULL, NULL, 'non', NULL, '2018-01-27 17:16:23', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `capteurs`
+--
+
+DROP TABLE IF EXISTS `capteurs`;
+CREATE TABLE IF NOT EXISTS `capteurs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ID_user` int(11) DEFAULT NULL,
+  `maitre` int(11) DEFAULT NULL,
+  `pseudo` varchar(255) DEFAULT NULL,
+  `numero_de_serie` int(11) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `piece` varchar(255) NOT NULL,
+  `etat` varchar(255) NOT NULL DEFAULT 'ok',
+  `valeur` int(11) DEFAULT NULL,
+  `panne` int(11) DEFAULT NULL,
+  `dateDcap` text,
+  `dateFcap` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `capteurs`
+--
+
+INSERT INTO `capteurs` (`id`, `ID_user`, `maitre`, `pseudo`, `numero_de_serie`, `nom`, `type`, `piece`, `etat`, `valeur`, `panne`, `dateDcap`, `dateFcap`) VALUES
+(22, 37, NULL, 'pierre78', 6565, 'Température 1', 'temperature', 'cuisine', 'non', 19, NULL, '2018-01-22 10:08:11', '2018-01-22 10:08:13'),
+(15, NULL, NULL, 'royave94', 78, 'Température 1', 'temperature', 'Chambre Royave', 'ok', NULL, NULL, NULL, NULL),
+(20, NULL, NULL, 'ah', 1234, 'Température 1', 'temperature', 'cuisine', 'ok', NULL, NULL, NULL, NULL),
+(19, NULL, NULL, 'pp', 3232, 'capteur cuisine', 'temperature', 'cuisine', 'ok', NULL, NULL, NULL, NULL),
+(21, NULL, NULL, 'm', 4567, 'Température 1', 'temperature', 'cuisine', 'ok', NULL, NULL, NULL, NULL),
+(23, NULL, NULL, 'pierre78', 32325, 'Baur', 'temperature', 'Cuisine', 'ok', NULL, NULL, NULL, NULL),
+(28, 37, NULL, 'pierre788', 656464, 'camera', 'camera', 'salon', 'non', 50, NULL, '2018-01-22 10:04:02', '2018-01-22 10:06:48'),
+(26, 37, NULL, 'pierre78', 66848452, 'Luminosité 1', 'luminosite', 'salon', 'non', 49, NULL, '2018-01-12 12:57:24', '2018-01-12 13:21:42'),
+(27, 37, NULL, 'pierre78', 194984, 'test', 'luminosite', 'Cuisine', 'non', 52, NULL, '2018-01-18 10:05:08', '2018-01-18 10:05:14'),
+(29, 37, NULL, 'pierre788', 65654, 'temperature3', 'temperature', 'salon', 'ok', 25, NULL, '2018-01-16 16:17:46', '2018-01-16 16:17:46'),
+(30, 37, NULL, 'pierre788', 20355, 'test temperature bug', 'temperature', 'cuisine', 'non', 26, NULL, NULL, '2018-01-18 10:05:05'),
+(31, 37, NULL, 'pierre78', 654654654, 'camera 2', 'camera', 'cuisine', 'non', 1, NULL, '2018-01-22 10:00:55', '2018-01-22 10:06:48'),
+(32, 37, NULL, NULL, 6578, 'Caméra du garage', 'camera', 'Garage', 'non', NULL, NULL, '2018-01-22 10:00:55', '2018-01-22 10:06:48'),
+(40, 64, 64, NULL, 45684576, 'capteur cuisine 1', 'temperature', 'Cuisine', 'ok', 20, NULL, '2018-01-30 13:19:27', NULL),
+(41, 64, 64, NULL, 784511, 'camera cuisine 1', 'camera', 'Cuisine', 'ok', 20, NULL, '2018-01-30 13:19:54', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `catalogue`
+--
+
+DROP TABLE IF EXISTS `catalogue`;
+CREATE TABLE IF NOT EXISTS `catalogue` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  `numero` int(11) NOT NULL,
+  `description` text NOT NULL,
+  `prix` varchar(255) NOT NULL,
+  `date_ajout` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `catalogue`
+--
+
+INSERT INTO `catalogue` (`id`, `nom`, `numero`, `description`, `prix`, `date_ajout`, `image`) VALUES
+(1, 'Détecteur de présence', 78310, 'Voici notre tout dernier détecteur de présence blablablablablablablabalb', '25', '15/12/17', 'detecteur_presence.jpg'),
+(2, 'Détecteur infrarouge', 365478, 'Et là c\'est notre dernier détecteur infrarouge !', '15', '17/12/17', '\r\ndetecteur_infra.png'),
+(4, 'Capteur de lumière', 256487, 'Le capteur de lumière de Domisep est l\'un des meileurs du marché. Il vous indiquera avec grande précision la luminosité dans chacune de vos pièces en disposant !', '22', '17/12/17', 'capteur_lumi.png'),
+(16, 'plzpod', 588495, 'voilà quoi', '50', '30/01/2018', 'icone_cuisine.png');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `cgu`
+--
+
+DROP TABLE IF EXISTS `cgu`;
+CREATE TABLE IF NOT EXISTS `cgu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `texte` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `cgu`
+--
+
+INSERT INTO `cgu` (`id`, `texte`) VALUES
+(1, 'ez,poezfijzeoinvpozeipze,poeznvpiznev'),
+(2, '\r\n              CGU'),
+(3, '\r\n              Bonour'),
+(4, '\r\n              Wsh');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `cle`
+--
+
+DROP TABLE IF EXISTS `cle`;
+CREATE TABLE IF NOT EXISTS `cle` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cle` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `cle`
+--
+
+INSERT INTO `cle` (`id`, `cle`) VALUES
+(10, '222');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `faq`
+--
+
+DROP TABLE IF EXISTS `faq`;
+CREATE TABLE IF NOT EXISTS `faq` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `question` text NOT NULL,
+  `reponse` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `faq`
+--
+
+INSERT INTO `faq` (`id`, `question`, `reponse`) VALUES
+(1, 'bonjour ??', 'aurevoir');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `forum_reponse`
+--
+
+DROP TABLE IF EXISTS `forum_reponse`;
+CREATE TABLE IF NOT EXISTS `forum_reponse` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `auteur` varchar(255) DEFAULT NULL,
+  `message` text,
+  `date_message` datetime DEFAULT NULL,
+  `correspondance_sujet` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `forum_reponse`
+--
+
+INSERT INTO `forum_reponse` (`id`, `auteur`, `message`, `date_message`, `correspondance_sujet`) VALUES
+(1, 'Tomtom', 'Ok c\'est cool', '2018-01-26 16:22:22', 1),
+(2, 'Tomtom', 'd\'accord', '2018-01-26 17:12:35', 1),
+(5, 'Tomtom', 'efsg', '2018-01-26 17:31:42', 3),
+(4, 'admin', 'voilà', '2018-01-26 17:14:08', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `forum_sujet`
+--
+
+DROP TABLE IF EXISTS `forum_sujet`;
+CREATE TABLE IF NOT EXISTS `forum_sujet` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `auteur_sujet` varchar(255) DEFAULT NULL,
+  `titre` varchar(255) DEFAULT NULL,
+  `date_derniere_reponse` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `forum_sujet`
+--
+
+INSERT INTO `forum_sujet` (`id`, `auteur_sujet`, `titre`, `date_derniere_reponse`) VALUES
+(1, 'Tomtom', 'Evier cassé', '2018-01-26 16:20:09'),
+(3, 'admin', 'nouveau', '2018-01-26 17:14:03');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `mentions_legale`
+--
+
+DROP TABLE IF EXISTS `mentions_legale`;
+CREATE TABLE IF NOT EXISTS `mentions_legale` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `texte` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `mentions_legale`
+--
+
+INSERT INTO `mentions_legale` (`id`, `texte`) VALUES
+(1, '\r\n                Nouvelles mentions légales'),
+(2, '\r\n                Edit'),
+(3, '\r\n                Bonjour'),
+(4, '\r\n                o,zaoid,');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `piece`
+--
+
+DROP TABLE IF EXISTS `piece`;
+CREATE TABLE IF NOT EXISTS `piece` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ID_user` int(11) DEFAULT NULL,
+  `maitre` int(11) DEFAULT NULL,
+  `pseudo` varchar(255) DEFAULT NULL,
+  `nom` varchar(255) DEFAULT NULL,
+  `Type` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `piece`
+--
+
+INSERT INTO `piece` (`id`, `ID_user`, `maitre`, `pseudo`, `nom`, `Type`) VALUES
+(23, 0, NULL, 'pierre78', 'Cuisine', NULL),
+(5, 0, NULL, 'pseudo', 'cuisine', 'cuisine'),
+(22, 0, NULL, 'pierre78', 'Salon', NULL),
+(11, 0, NULL, 'royave94', 'Chambre Royave', NULL),
+(12, 0, NULL, 'royave94', 'Salle à manger', NULL),
+(16, 0, NULL, 'pp', 'cuisine', NULL),
+(17, 0, NULL, 'ah', 'cuisine', NULL),
+(18, 0, NULL, 'm', 'cuisine', NULL),
+(24, 37, NULL, NULL, 'Cuisine', NULL),
+(25, 37, NULL, NULL, 'Salon', NULL),
+(26, NULL, NULL, NULL, NULL, NULL),
+(27, NULL, NULL, 'wesh', 'Cuisine', NULL),
+(28, 37, NULL, NULL, 'Garage', NULL),
+(29, 37, NULL, NULL, 'Escaliers', NULL),
+(36, 62, 59, NULL, 'Salle à manger', NULL),
+(40, 64, 64, NULL, 'Cuisine', NULL),
+(39, 64, 64, NULL, 'Salon', NULL),
+(41, 64, 64, NULL, 'Salle à manger', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `qui_sommes_nous`
+--
+
+DROP TABLE IF EXISTS `qui_sommes_nous`;
+CREATE TABLE IF NOT EXISTS `qui_sommes_nous` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `texte` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `qui_sommes_nous`
+--
+
+INSERT INTO `qui_sommes_nous` (`id`, `texte`) VALUES
+(1, '\r\n           Bonjour\r\n'),
+(2, '\r\n           Bonjour\r\n'),
+(3, '\r\n           Nous voilà'),
+(4, '\r\n           Nous voilà'),
+(5, '\r\n           lppo,pso,psv'),
+(6, '\r\n           lppo,pso,psv');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `utilisateur`
+--
+
+DROP TABLE IF EXISTS `utilisateur`;
+CREATE TABLE IF NOT EXISTS `utilisateur` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) DEFAULT NULL,
+  `prenom` varchar(255) DEFAULT NULL,
+  `cle` int(11) DEFAULT NULL,
+  `mail` varchar(255) DEFAULT NULL,
+  `pseudo` varchar(255) DEFAULT NULL,
+  `mdp` varchar(255) DEFAULT NULL,
+  `statut` varchar(255) DEFAULT NULL,
+  `maitre` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=67 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`ID`, `nom`, `prenom`, `cle`, `mail`, `pseudo`, `mdp`, `statut`, `maitre`) VALUES
+(35, 'az', 'b', 1, 'f@gmail.com', 'c', 'w', NULL, 0),
+(64, 'Serge', 'Mathieu', 111, 'Serge@gmail.com', 'le mytho', '$2y$12$YLlBnjxGPKZ7jSlHvOAj0.JRlW7OuNVUPx8DOA41oTH/WYQ2HIGG6', 'classique', 64),
+(37, 'Barret', 'Pierre', 78, 'test@gmail.com', 'pierre788', 'test', 'classique', 0),
+(38, 'test', 'test', 5, 'test78@gmail.com', 'pierre788', 'test', NULL, 0),
+(39, 'Ben Ahmed', 'Rayane', 123, 'royave@gmail.com', 'royave94', '456', NULL, 0),
+(40, 'Barachin', 'Gustave', 5555, 'gus@gmail.com', 'Gustavo', 'gugus', NULL, 0),
+(45, 'toto', 'popo', 123456, 'pohu@gmail.com', 'ah', 'p', NULL, 0),
+(46, 'a', 'b', 9, 'fg@gmail.com', 'm', 'c', NULL, 0),
+(50, 'Ben Ahmed', 'Rayane', 234567, 'rayane@gmail.com', 'royave', '$2y$12$1rnaoFm4w2HAl8/JEA6uueq6fN3wLodO5o9YMcPRq1wbxfPvxtnOu', 'admin', 0),
+(49, 'Barret', 'Pierre', 123456, 'p@gmil.com', 'pierre78310', '$2y$12$9OZlinD2V9sbrWMash1hQuhTkwn7np4OCcjpFRn28pD91aGsb80f.', 'classique', 0),
+(66, 'aurevoir', 'bonjour', 112, 'salut@gmail.com', 'salut', '$2y$12$A2znXWVRUt1ck7hhsokFxulH3kuQlnu7plfsUVEFddD4OWu0ATgcq', 'classique', 66),
+(63, 'admin', 'admin', 2568898, 'admin@gmail.com', 'admin', '$2y$12$PFE0bbdegwlO90VlZs9RZeYqhoYVRyqxntUfxzYpCuf1mOQc9mdrq', 'admin', 63),
+(61, 'ballas', 'nicolas', NULL, 'nicodu94@gmail.com', 'salope', '$2y$12$uSGGU4eLkVbt4He0Cm.ulOcHc7kL6lw5J1DpJp71mY8C6QAeLDBDG', 'restreint', 59);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
